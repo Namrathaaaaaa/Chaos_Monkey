@@ -7,11 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI || "mongodb://mongo:27017/cafe", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log('Mongo connected'))
-  .catch(err => console.log(err));
+mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/cafe");
 
 const Order = require('./models/Order');
 
@@ -36,4 +32,4 @@ app.get('/api/orders', async (req, res) => {
 
 app.get('/health', (req, res) => res.send("OK"));
 
-app.listen(5000, () => console.log('Backend running on port 5000'));
+app.listen(5001, () => console.log('Backend running on port 5001'));

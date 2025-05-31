@@ -1,0 +1,22 @@
+/* Add these styles to make all text elements properly centered */
+p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.intro-section p {
+  max-width: 90%;
+  margin: 10px auto;
+}
+
+li {
+  text-align: center;
+}
+
+/* Make the order section content centered */
+.order-section > * {
+  margin-left: auto;
+  margin-right: auto;
+}
